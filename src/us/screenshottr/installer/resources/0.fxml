@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.screenshottr.installer.Controller">
+   <top>
+      <Pane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="#a4a4a4" strokeType="INSIDE" width="171.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0a5fae" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <ImageView fitHeight="135.0" fitWidth="202.0" layoutX="18.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@logonbg.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="179.0" layoutY="25.0" prefHeight="89.0" prefWidth="421.0" text="Welcome to the ScreenShottr setup wizard." wrapText="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="135.0" fitWidth="202.0" layoutX="18.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@camera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="50.0" prefWidth="419.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c9c9c9" height="52.0" stroke="#a4a4a4" strokeType="INSIDE" width="768.0" />
+            <Button disable="true" layoutX="369.0" layoutY="13.0" mnemonicParsing="false" text="&lt; Back" />
+            <Button fx:id="next" layoutX="436.0" layoutY="13.0" mnemonicParsing="false" onAction="#onNextEvent" text="Next &gt;" />
+            <Button fx:id="Cancel" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCancelEvent" text="Cancel" />
+         </children>
+      </Pane>
+   </bottom>
+   <right>
+      <Label prefHeight="282.0" prefWidth="406.0" text="This Setup Wizard will install ScreenShottr on your computer. Click &quot;Next&quot; to continue or &quot;Cancel&quot; or exit the setup Wizard. By clicking &quot;Next&quot; you agree to our Terms of Service, which you can view" wrapText="true" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="150.0" left="6.0" right="40.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </right>
+</BorderPane>

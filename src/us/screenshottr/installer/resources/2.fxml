@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.screenshottr.installer.Controller">
+   <top>
+      <Pane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@camera.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="15.0" text="Choose ScreenShottr Version">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <Label layoutX="107.0" layoutY="38.0" text="Select which version of ScreenShottr you want to install">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" layoutX="369.0" layoutY="13.0" mnemonicParsing="false" onAction="#onBackEvent" text="&lt; Back" />
+            <Button layoutX="436.0" layoutY="13.0" mnemonicParsing="false" onAction="#install" text="Install" />
+            <Button fx:id="Cancel" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCancelEvent" text="Cancel" />
+            <Rectangle arcHeight="5.0" arcWidth="2.0" height="2.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="81.0" layoutY="14.0" prefHeight="55.0" prefWidth="485.0" text="Setup can install two different versions of ScreenShottr. Please select which version you want to install." wrapText="true" />
+            <RadioButton fx:id="encrypted" layoutX="81.0" layoutY="82.0" mnemonicParsing="false" onAction="#onEncryptedClick" selected="true" text="Encrypted" />
+            <RadioButton fx:id="unencrypted" layoutX="81.0" layoutY="103.0" mnemonicParsing="false" onAction="#onUnencryptedClick" text="Unencrypted" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.screenshottr.installer.Controller">
+   <top>
+      <Pane prefHeight="97.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@camera.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="107.0" layoutY="15.0" text="Choose Install Location">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="2.0" layoutY="87.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <Label layoutX="107.0" layoutY="38.0" text="Choose the folder in which you want to install ScreenShottr.">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" layoutX="369.0" layoutY="13.0" mnemonicParsing="false" onAction="#onBackEvent" text="&lt; Back" />
+            <Button layoutX="436.0" layoutY="13.0" mnemonicParsing="false" onAction="#onNextEvent" text="Next &gt;" />
+            <Button fx:id="Cancel" layoutX="514.0" layoutY="13.0" mnemonicParsing="false" onAction="#onCancelEvent" text="Cancel" />
+            <Rectangle arcHeight="5.0" arcWidth="2.0" height="2.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="81.0" layoutY="14.0" prefHeight="55.0" prefWidth="485.0" text="Setup will install ScreenShottr in the following folder. To install in a different folder, click Browse and select another folder. Click next to continue the installation." wrapText="true" />
+            <Label layoutX="81.0" layoutY="118.0" text="Destination Folder:" />
+            <TextField fx:id="destFolder" layoutX="189.0" layoutY="114.0" prefHeight="25.0" prefWidth="271.0" />
+            <Button fx:id="browse" layoutX="472.0" layoutY="114.0" mnemonicParsing="false" text="Browse..." />
+            <Label fx:id="spaceRequired" layoutX="81.0" layoutY="201.0" text="Space required: ">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="spaceAvailable" layoutX="81.0" layoutY="217.0" text="Space available: ">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
